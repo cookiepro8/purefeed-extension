@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "PureFeed Logic Gate",
+  "version": "1.0.0",
+  "description": "Interrupts the dopamine loop by blurring media on social feeds.",
+  "action": {
+    "default_title": "PureFeed"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.instagram.com/*",
+        "*://*.x.com/*"
+      ],
+      "css": ["my-styles.css"],
+      "js": ["content-scripts.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
